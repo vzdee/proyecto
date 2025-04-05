@@ -1,44 +1,58 @@
 <?php
-require '../includes/header.php';
-
+include_once '../includes/headerdash.php';
 ?>
-    <section id="dashboard">
-        <div class="dashbox">
-            <h2>DASHBOARD</h2>
-        </div>
 
-        <div class="empleados-box">
-            <h3>Lista de Empelado</h3>
-            <div class="empleados-table">
-                <table>
-                    <th>IDEmpleado</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Telefono</th>
-                    <th>NSS</th>
-                    <th>RFC</th>
+<section id="dashboard">
+    <div class="tables-box">
+        <div class="table-empleados">
+            <h2>Empleados</h2>
+            <div class="empleados">
+                <table class="employers-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>NSS</th>
+                            <th>RFC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employers-body">
+                        <!-- Los datos de los empleados se llenarán aquí mediante AJAX -->
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <div class="services-box">
-            <h3>Lista de Servicios</h3>
-            <div class="services-table">
-                <table>
-                    <th>IDServicio</th>
-                    <th>Nombre Cliente</th>
-                    <th>Nombre Empleado</th>
-                    <th>Tipo Servici</th>
-                    <th>Estado Servicio</th>
-                    <th>Costo Estimado</th>
-                    <th>Fecha Inicial</th>
-                    <th>Fecha Final</th>
+        <div class="table-services">
+            <h2>Servicios</h2>
+            <div class="services">
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th># Servicio</th>
+                            <th># Cliente</th>
+                            <th># Empleado</th>
+                            <th>Tipo Servicio</th>
+                            <th>Costo Estimado</th>
+                            <th>Fecha Incio</th>
+                            <th>Fecha Final</th>
+                        </tr>
+                    </thead>
+                    <tbody id="services-body">
+                        <!-- Los datos de los servicios se llenarán aquí mediante AJAX -->
+                    </tbody>
                 </table>
             </div>
         </div>
 
-    </section>
+    </div>
+
+
+
+</section>
 
 
 </body>

@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/dash.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="../public/js/script.js" defer></script>
-    <title>Mi Empresa</title>
+    <title>dashboardh</title>
 </head>
 <body>
     <header>
         <div class="container">
             <p class="logo"> RAACAA </p>
             <nav>
-                <a href="index.php#home"> Home</a>
-                <a href="index.php#about-us" > About Us</a>
-                <a href="index.php#services"> Services </a>
+                <a href="">Dashboard</a>
+                <a href="" >Alta Empleado </a>
+                <a href="">Consulta Servicio</a>
             </nav>
         </div>
     </header>
+
