@@ -1,23 +1,28 @@
-*{
+/* Reset básico */
+* {
     box-sizing: border-box; 
     padding: 0;
     margin: 0;
 }
 
-body{
+/* Estilo general del body */
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
+    background-color: #f4f4f4;
 }
 
-html{
+/* Scrolling suave */
+html {
     scroll-behavior: smooth;
 }
 
-header{
+/* Header */
+header {
     background-color: rgb(246, 242, 227);
 }
 
-header .logo{
+header .logo {
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
@@ -25,91 +30,121 @@ header .logo{
     font-size: 1.50em;
 }
 
-header .container{
+header .wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header nav{
+header nav {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
 }
 
-header a{
+header a {
     padding: 5px 12px;
     font-weight: bold;
     text-decoration: none;
     color: black;
 }
 
-header a:hover{
+header a:hover {
     color: #1780e3;
 }
 
-.tables-box {
+/* Contenedor principal */
+.container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-
-.table-empleados, .table-services {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow-x: auto;
-    text-align: center;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: center;
+/* Estilo de las tablas */
+.box {
+    overflow-x: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
+/* Estilo de la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.85rem;
+    min-width: 500px;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     text-align: center;
+    color: #333;
 }
 
-thead {
-    background-color: #007bff;
-    color: white;
+/* Estilos para dispositivos móviles (mobile-first) */
+table th,
+table td {
+    font-size: 0.9rem;
 }
 
+table {
+    /* Aseguramos que las tablas se desplieguen de forma más fluida */
+    width: 100%;
+    table-layout: fixed; /* Permite que la tabla se ajuste mejor */
+}
 
-@media (min-width: 720px){
-    header{
+/* Media query para pantallas mayores a 720px */
+@media (min-width: 720px) {
+    /* Header en pantallas grandes */
+    header {
         position: fixed;
         width: 100%;
+        z-index: 10;
     }
 
-    header .container{
+    header .wrap {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
-    header nav{
+    header nav {
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 20px;
     }
 
-    #dashboard{
-        padding: 100px;
+    /* Contenedor y disposición de las tablas */
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
+    .table-empleados,
+    .table-services {
+        width: 48%;
+    }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table th,
+    table td {
+        font-size: 1rem;
+    }
 }
