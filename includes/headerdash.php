@@ -17,7 +17,7 @@
                 <a href="" >Alta Empleado </a>
                 <a href="">Consulta Servicio</a>
                 <a href=""> Perfil</a>
-                <a href="">Cerrar Sesion</a>
+                <a href="index.php#home">Cerrar Sesion</a>
             </nav>
         </div>
     </header>
